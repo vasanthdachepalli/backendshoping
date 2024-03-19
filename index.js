@@ -138,7 +138,8 @@ app.get('/users',function(req,res){
 })
 app.use('/upload',require('./api/uploader'));
 app.use('/api',require('./api/counter'))
-app.listen(8080, function() {
+const port = process.env.PORT || 8080;
+app.listen(port, function() {
     console.log("Server started on port 8080.");
   });
 
